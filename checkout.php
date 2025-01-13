@@ -58,9 +58,9 @@ if (empty($_SESSION["user_id"])) {
                     <div class="container">
                         <ul class="row links">
 
-                            <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="jenis kue.php">Choose Restaurant</a></li>
-                            <li class="col-xs-12 col-sm-4 link-item "><span>2</span><a href="#">Pick Your favorite food</a></li>
-                            <li class="col-xs-12 col-sm-4 link-item active"><span>3</span><a href="checkout.php">Order and Pay online</a></li>
+                            <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="jenis kue.php">Pilih Jenis Kue</a></li>
+                            <li class="col-xs-12 col-sm-4 link-item "><span>2</span><a href="#">Pilih Kue nya</a></li>
+                            <li class="col-xs-12 col-sm-4 link-item active"><span>3</span><a href="checkout.php">Order dan Bayar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,19 +85,19 @@ if (empty($_SESSION["user_id"])) {
                                         <div class="col-sm-12">
                                             <div class="cart-totals margin-b-20">
                                                 <div class="cart-totals-title">
-                                                    <h4>Cart Summary</h4>
+                                                    <h4>Checkout</h4>
                                                 </div>
                                                 <div class="cart-totals-fields">
 
                                                     <table class="table">
                                                         <tbody>
                                                             <tr>
-                                                                <td>Cart Subtotal</td>
+                                                                <td>Total Belanja</td>
                                                                 <td> <?php echo "Rp." . $item_total; ?></td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Shipping &amp; Handling</td>
-                                                                <td>free shipping</td>
+                                                                <td>Pengiriman &amp; Penanganan</td>
+                                                                <td>Gratis Ongkir</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="text-color"><strong>Total</strong></td>
@@ -113,11 +113,15 @@ if (empty($_SESSION["user_id"])) {
                                                     <li>
                                                         <label class="custom-control custom-radio  m-b-20">
                                                             <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Cash on delivery</span>
-                                                            <br> <span>Please send your check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>
+                                                            <br> <span></span> </label>
                                                     </li>
                                                     <li>
                                                         <label class="custom-control custom-radio  m-b-10">
-                                                            <input name="mod" type="radio" value="paypal" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-small.png" alt="Beli sekarang dengan PayPal" width="250"></span>
+                                                        <input name="mod" type="radio" value="paypal" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">
+                                                            <img src="images/Dana.jpeg" alt="Beli sekarang dengan Dana" width="250">
+                                                        </span>
                                                             
                                                         </label>
                                                     </li>
